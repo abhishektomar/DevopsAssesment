@@ -1,0 +1,27 @@
+---
+pg::pgpool::pgpackages:
+    - 'postgresql-client-9.2'
+    - 'postgresql-client-common'
+mongo::client::mongo_packages: 'mongodb-org-shell,mongodb-org-tools'
+symphony::app_name: "assessment"
+symphony::app_name: "testing"
+symphony::nginx::packages: "nginx"
+symphony::nginx::server_name: "localhost"
+symphony::nginx::document_root: "/var/www/symphony"
+php::ensure: latest
+php::manage_repos: true
+php::fpm: true
+php::dev: true
+php::composer: true
+php::pear: true
+php::phpunit: false
+php::fpm::config::log_level: notice
+php::composer::auto_update: true
+php::extensions:
+        pgsql: {}
+        mysql: {}
+        xsl: {}
+        intl: {}
+        mongo: {}
+php::settings:
+        Date/date.timezone: Asia/Kolkata

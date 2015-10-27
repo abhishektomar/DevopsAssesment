@@ -1,0 +1,10 @@
+---
+pg::user: "tradetracker"
+pg::password: "$1$S2rWlqFD$ocMycsQ3Pomb73Nbgqp32."
+pg::server::pgpackages:
+    - 'postgresql-9.2'
+    - 'pgadmin3'
+    - 'postgresql-9.2-pgpool2'
+pg::pgpool::pgpackages:
+    - 'pgpool2'
+    - 'postgresql-client-9.2'

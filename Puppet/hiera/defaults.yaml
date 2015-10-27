@@ -1,0 +1,9 @@
+---
+basenode::packages:
+    - "screen"
+    - "git-core"
+    - "curl"
+    - "python-pip"
+    - "ipython"
+    - "unzip"
+    - "htop"

@@ -1,0 +1,5 @@
+---
+mongo::server::package_name: 'mongodb-org'
+mongo::server::dbpath: '/data/mongodb'
+mongo::server::storage_engine: 'wiredTiger'
+mongo::server::port: 27017
