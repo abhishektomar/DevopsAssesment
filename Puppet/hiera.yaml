@@ -1,0 +1,11 @@
+---
+:backends:
+  - yaml
+:hierarchy:
+  - node/%{::fqdn}
+  - cluster/%{::cluster}
+  - defaults
+:yaml:
+  :datadir: /etc/puppet/hiera
+:logger: puppet
+:merge_behavior: deeper
