@@ -1,0 +1,4 @@
+CREATE OR REPLACE FUNCTION pgpool_walrecrunning()
+RETURNS bool
+AS '/usr/lib/postgresql/9.2/lib/pgpool-walrecrunning', 'pgpool_walrecrunning'
+LANGUAGE C VOLATILE STRICT;
