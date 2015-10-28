@@ -1,0 +1,7 @@
+parameters:
+#    trade_tracker_assesment.example.class: TradeTracker\AssesmentBundle\Example
+
+services:
+#    trade_tracker_assesment.example:
+#        class: %trade_tracker_assesment.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

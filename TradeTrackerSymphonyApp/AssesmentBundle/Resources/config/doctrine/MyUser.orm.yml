@@ -1,0 +1,20 @@
+TradeTracker\AssesmentBundle\Entity\MyUser:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        firstName:
+            type: string
+            length: '63'
+            column: first_name
+        lastName:
+            type: string
+            length: '63'
+            column: last_name
+        age:
+            type: smallint
+    lifecycleCallbacks: {  }

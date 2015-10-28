@@ -1,0 +1,21 @@
+trade_tracker_assesment_homepage:
+    pattern:  /assesment
+    defaults: { _controller: TradeTrackerAssesmentBundle:Default:index }
+trade_tracker_assesment_setup:
+    pattern:  /assesment/setup
+    defaults: { _controller: TradeTrackerAssesmentBundle:Default:setup }
+trade_tracker_assesment_test:
+    pattern:  /assesment/test
+    defaults: { _controller: TradeTrackerAssesmentBundle:Default:test }
+trade_tracker_assesment_takedown:
+    pattern:  /assesment/takedown
+    defaults: { _controller: TradeTrackerAssesmentBundle:Default:takedown }
+trade_tracker_assesment_transfer:
+    pattern:  /assesment/transfer
+    defaults: { _controller: TradeTrackerAssesmentBundle:Default:transfer }
+trade_tracker_assesment_count:
+    pattern:  /assesment/count
+    defaults: { _controller: TradeTrackerAssesmentBundle:Default:count }
+trade_tracker_assesment_teardown:
+    pattern:  /assesment/teardown
+    defaults: { _controller: TradeTrackerAssesmentBundle:Default:teardown }

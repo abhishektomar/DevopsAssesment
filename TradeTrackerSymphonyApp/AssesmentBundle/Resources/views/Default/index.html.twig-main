@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TradeTraker Assesment</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h1 style="font-family:verdana">TradeTracker DevOPS Assesment</h1>
+<hr>
+<p><b style="font-family:verdana">Following are the tasks which we are doing here in this Assesment: </p></b>
+<pre><p>
+    <b>a. /setup
+    Purpose:</b> Prepare nodes for load balancer upon receiving GitHub push event.
+
+    <b>b. /test
+    Purpose:</b> Testing end point where you are required to generate random record with 3 attributes 
+    (first name, last name, age) and insert it into a PostgreSQL DB.
+
+    <b>c. /takedown
+    Purpose:</b> Remove a node from the PostgreSQL cluster.
+
+    <b>d. /transfer
+    Purpose:</b> Move data currently stored in PostgreSQL in NoSQL engine.
+
+    <b>e. /count
+    Purpose:</b> Return the count of records stored in NoSQL engine.
+
+    <b>f. /teardown
+    Purpose:</b> Dispose-off resources.
+
+</pre></p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TradeTraker Assesment</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h1 style="font-family:verdana">TradeTracker DevOPS Assesment</h1>
+<hr>
+<p><b style="font-family:verdana">This is the test app home page. </p></b>
+<pre>
+<h3> App url </h3>  <a href="http://symfony-web-app-987391500.us-east-1.elb.amazonaws.com/assesment/test">http://symfony-web-app-987391500.us-east-1.elb.amazonaws.com/assesment/test</a>
+</pre>
+</body>
+</html>

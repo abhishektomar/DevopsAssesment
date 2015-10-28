@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adding Random data</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+<p><h3 style="font-family:verdana"> Adding the First Name, Last Name and Age in to the Database </h3></p>
+<table style="width:50%">
+  <tr>
+    <td><b>First Name</b></td>
+    <td><b>Last name</b></td>      
+    <td><b>Age</b></td>
+  </tr>
+  <tr>
+    <td>{{ first_name }} </td>
+    <td>{{ last_name }}</td>        
+    <td>{{ age  }}</td>
+  </tr>
+</table>
+<p>Total Number of Records inserted - {{count}} </p>
+</body>
+</html>
