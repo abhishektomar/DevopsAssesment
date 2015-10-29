@@ -56,9 +56,9 @@ class DefaultController extends Controller
     public function takedownAction()
     {
         $check_running = shell_exec('/usr/local/bin/aws ec2 describe-instance-status --instance-ids i-7a164fae --filters --region us-east-1 --output text | awk \'/INSTANCESTATE/ {print $3}\' | tr -d \'\n\'');
-        if ($check_running != "running") {
-            $msg = "Instance is Running!!Terminating!!";
-            shell_exec('/usr/local/bin/aws ec2 stop-instances --instance-ids i-7a164fae --dry-run --output text --region us-east-1');
+        if ($check_running == "running") {
+            $msg = "Instance is Running!!Stopping!!";
+            shell_exec('/usr/local/bin/aws ec2 stop-instances --instance-ids i-7a164fae --output text --region us-east-1');
         } else {
             $msg = "Instance is not Running!!";
         }
@@ -74,7 +74,7 @@ class DefaultController extends Controller
             $msg1 = "You can test the App using the Below URL";
         } else {
             $msg = "Creating Infrastructure.......";
-            shell_exec('/usr/local/bin/aws autoscaling update-auto-scaling-group --auto-scaling-group-name tradetracker-assesment --min-size 1 --max-size 1 --launch-configuration-name tradetracker-assesment --region us-east-1 --output text');
+            shell_exec('/usr/local/bin/aws autoscaling update-auto-scaling-group --auto-scaling-group-name tradetracker-assesment --min-size 2 --max-size 6 --launch-configuration-name tradetracker-assesment-lc --region us-east-1 --output text');
             $msg1 = "Wait for few minutes and then use the below url for Testing.";
 
         }
@@ -86,7 +86,7 @@ class DefaultController extends Controller
         $status = shell_exec('/usr/local/bin/aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names tradetracker-assesment --region us-east-1 | /usr/bin/awk \'/MinSize/ {print $2}\'| tr -d \',\'');
         if ($status > 0) {
             $msg = "Destroying the Infrastructure which is created for Testing the App!!";
-            shell_exec('/usr/local/bin/aws autoscaling update-auto-scaling-group --auto-scaling-group-name tradetracker-assesment --min-size 0 --max-size 0 --launch-configuration-name tradetracker-assesment --region us-east-1 --output text');
+            shell_exec('/usr/local/bin/aws autoscaling update-auto-scaling-group --auto-scaling-group-name tradetracker-assesment --min-size 0 --max-size 0 --launch-configuration-name tradetracker-assesment-lc --region us-east-1 --output text');
             $elb = shell_exec('/usr/local/bin/aws elb describe-load-balancers --region us-east-1 --output text | /usr/bin/awk \'/LOADBALANCERDESCRIPTIONS/ {print $2}\' | /usr/bin/tr -d \'\n\'');
         } else {
             $msg = "Infrastruture is not running!!";
