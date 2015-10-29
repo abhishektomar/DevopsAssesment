@@ -11,10 +11,15 @@ server {
     error_log /var/log/nginx/<%= @server_name %>.error.log;
     access_log /var/log/nginx/<%= @server_name %>.access.log;
 
+    location / {
+        root /var/www/symphony/web/default/;
+        index index.html;
+    }
+
     # strip app.php/ prefix if it is present
     rewrite ^/app_\.php/?(.*)$ /$1 permanent;
 
-    location / { 
+    location /assesment { 
         index app_dev.php;
         try_files $uri @rewriteapp;
     }   
